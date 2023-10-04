@@ -338,3 +338,33 @@ input[type="checkbox"]{
 .bestseller button:hover {
     background: rgb(255, 115, 0);
 }
+
+.card-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.card-container2 .box2 {
+    margin: 10px;
+    border: none;
+    box-shadow: 0 3px 10px rgb(0, 0, 0, 0.3);
+    border-radius: 15px;
+    height: 400px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-size: 330px 300px;
+    background-position: top;
+}
+#flower1, #flower8{
+    background-image: url("./images/b6.jpg");
+}
+#flower2, #flower7 {
+    background-image: url("./images/b4.jpg");
+
+}
+#flower3, #flower6 {
+    background-image: url("./images/b7.jpg");
+}
+#flower4, #flower5 {
+    background-image: url("./images/b8.jpg");
+}
