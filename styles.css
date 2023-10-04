@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+font-family: 'Quicksand', sans-serif;
+}
+#topmost-heading{
+    background-color: #d3d3d3;
+}
+
+#topmost-heading p{
+    font-weight: 600;
+    margin-left: 25px;
+    text-align: center;
+}
+/*navbar css*/
+nav{
+    display: flex;
+    width: 100%;
+    background-color: beige;
+    position: relative;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px 30px;
+}
+nav .logo{
+    font-size: 35px;
+    color: red;
+    font-weight: 800;
+    cursor: pointer;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    margin: auto 0;
+}
+nav ul li{
+margin: 0 2px;
+}
+
+nav ul li a{
+text-decoration: none;
+text-transform: uppercase;
+font-size: 20px;
+color: orangered;
+letter-spacing: 1px;
+padding: 5px 10px;
+}
+
+nav ul li a:hover{
+    color: #d3d3d3;
+    transition: 0.5s;
+}
+
+nav .search_box{
+    display: flex;
+    margin: auto 0;
+    height: 35px;
+    line-height: 35px;
+}
+
+nav .search_box input{
+    border: none;
+    outline: none;
+    background: #fff;
+    height:100%;
+    padding: 0 10px;
+    font-size: 20px;
+    width: 350px;
+}
+nav .search_box span{
+    color: orangered;
+    font-size: 20px;
+    background-color: #fff;
+    height: 100%;
+    padding: 8px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+}
+
+nav .search_box span:hover{
+    color: blue;
+}
+
+nav .search_box span::after{
+    height: 100%;
+    width: 0%;
+    content: '';
+    background-color: #d3d3d3;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+nav .search_box span:hover::after{
+    width: 100%;
+}
+
+nav .bar{
+    position: relative;
+    margin: auto;
+    display: none;
+}
+nav .bar span{
+    position: absolute;
+    color: #d3d3d3;
+    font-size: 35px;
+
+}
+input[type="checkbox"]{
+    appearance: none;
+    display: none;
+}
+
+@media screen and (max-width: 1250px){
+    nav{
+        display: block;
+        padding: 0;
+    }
+    nav .logo{
+        display: inline-block;
+        padding: 15px 30px;
+    }
+    nav .search_box{
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+        margin-bottom: 15px ;
+    }
+    nav .search_box input{
+        width: 90%;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        background:beige;
+        height: 0;
+        visibility: hidden;
+        transition: 0.3s;
+    }
+    nav ul li{
+        text-align: center;
+        transition: 0.3s 0.1s all;
+        opacity: 0;
+    }
+    nav ul li a{
+        font-size: 28px;
+        padding: 25px;
+        display: block;
+    }
+    nav ul li:nth-child(1){
+        transform: translateX(-150px);
+    }
+    nav ul li:nth-child(2) {
+        transform: translateX(-200px);
+    }
+    nav ul li:nth-child(3) {
+        transform: translateX(-250px);
+    }
+    nav ul li:nth-child(4) {
+        transform: translateX(-300px);
+    }
+    nav ul li:nth-child(5) {
+        transform: translateX(-350px);
+    }
+    nav .bar{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 80px;
+        cursor: pointer;
+    }
+    nav .bar #times{
+        display: none;
+    }
+    #check:checked ~ nav .bar #times {
+        display: block;
+    }
+    #check:checked ~ nav .bar #bars {
+        display: none;
+    }
+    #check:checked ~ nav ul{
+        visibility: visible;
+        height: 465px;
+    }
+    #check:checked ~ nav ul li:nth-child(1),
+    #check:checked~nav ul li:nth-child(2),
+    #check:checked~nav ul li:nth-child(3),
+    #check:checked~nav ul li:nth-child(4),
+    #check:checked~nav ul li:nth-child(5){
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+/*promo css*/
+
+.promo-container{
+    text-align: center;
+    /* background-color: rgb(243, 243, 116); */
+    padding-bottom: 30px;
+    margin-bottom: 15px;
+    background-image: url("./images/pexels-moose-photos-1037994.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+   
+}
+.promo-container div{
+    padding-top: 35px;
+    letter-spacing: 3px;
+    font-size: xx-large;
+    font-weight: 800;
+    color: orangered;
+}
+.promo-container p{
+    padding: 25px;
+    letter-spacing: 2px;
+    color: orangered;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.promo-container button{
+    background: orangered;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 30px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+.promo-container button:hover{
+    background: rgb(255, 115, 0);
+}
+
+/*card styles*/
+.card-container{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
+.card-container .box{
+    border: 1px solid black;
+    height: 200px;
+    width: 200px;
+}
+#box1{
+    background-image: url("./images/flower1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+#box2 {
+    background-image: url("./images/flower2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+#box3 {
+    background-image: url("./images/cake1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+#box4 {
+    background-image: url("./images/gift.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+#box5 {
+    background-image: url("./images/flower4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+/*best seller section*/
+
+.bestseller{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px;
+   
+}
+.section1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 7%;
+}
+.section1 div{
+    letter-spacing: 3px;
+    font-size: xx-large;
+    font-weight: 800;
+    padding: 20px 5px 5px 5px;
+}
+.section1 p{
+    padding: 5px;
+    letter-spacing: 2px;
+    font-size: 17px;
+    font-weight: 400;
+}
+.bestseller button{
+    position: relative;
+    left: 27%;
+    margin: 30px 0px;
+    background: orangered;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.bestseller button:hover {
+    background: rgb(255, 115, 0);
+}
