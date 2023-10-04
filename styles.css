@@ -346,16 +346,17 @@ input[type="checkbox"]{
 }
 .card-container2 .box2 {
     margin: 10px;
+    padding: 10px;
     border: none;
     box-shadow: 0 3px 10px rgb(0, 0, 0, 0.3);
     border-radius: 15px;
-    height: 400px;
+    /* height: 400px; */
     width: 300px;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
     background-size: 330px 300px;
-    background-position: top;
+    background-position: top; */
 }
-#flower1, #flower8{
+/* #flower1, #flower8{
     background-image: url("./images/b6.jpg");
 }
 #flower2, #flower7 {
@@ -367,4 +368,39 @@ input[type="checkbox"]{
 }
 #flower4, #flower5 {
     background-image: url("./images/b8.jpg");
+} */
+
+.box2 img{
+    height: 300px;
+    width: 280px;
+    border-radius: 15px;
+}
+.box2 p{
+text-align: center;
+text-transform: capitalize;
+padding: 5px;
+font-size: 15px;
+font-weight: 400;
+color: #808080;
+}
+.checked {
+    color: orange;
+}
+.box2 button{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #d3d3d3;
+    color: #808080;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px 5px 5px 0;
+}
+.box2 button:hover{
+    background: #7c838a;
+    color: #fff;
+    transition: 0.3s;
 }
