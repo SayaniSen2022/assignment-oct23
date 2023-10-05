@@ -121,6 +121,55 @@ input[type="checkbox"]{
     appearance: none;
     display: none;
 }
+/*megamenu css*/
+.nav2 {
+    background: rgb(233, 110, 10);
+    width: 100%;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 10px;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    text-decoration: none;
+    color: #fff;
+}
+.nav-links li:hover{
+   background:orangered;
+   transition: 0.3s;
+   cursor: pointer;
+}
+.nav-links .drop-menu{
+    background: rgb(233, 110, 10);;
+    width: 150px;
+    top:40%;
+    line-height: 45px;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+.nav-links li:hover .drop-menu{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+}
+.drop-menu li{
+    list-style: none;
+}
+.drop-menu li a{
+    width: 100%;
+    display: block;
+    padding: 0 0 0 15px;
+    font-weight: 400;
+    border-radius: 0px;
+}
 
 /*promo css*/
 
@@ -160,6 +209,7 @@ input[type="checkbox"]{
     padding: 10px 30px;
     border: 1px solid black;
     border-radius: 10px;
+    cursor: pointer;
 }
 .promo-container button:hover{
     background: rgb(255, 115, 0);
@@ -256,9 +306,11 @@ input[type="checkbox"]{
     padding: 5px;
     border: 1px solid black;
     border-radius: 10px;
+    cursor: pointer;
 }
 .bestseller button:hover {
     background: rgb(255, 115, 0);
+    transition: 0.3s;
 }
 
 .card-container2 {
@@ -311,6 +363,7 @@ color: #808080;
     border-radius: 5px;
     padding: 5px;
     margin: 10px 5px 5px 0;
+    cursor: pointer;
 }
 .box2 button:hover{
     background: #b9c2cc;
@@ -400,6 +453,11 @@ color: #808080;
     font-size: 18px;
     border: 1px solid black;
     border-radius: 10px;
+    cursor: pointer;
+  }
+  .promo-container2 section:nth-child(2) button:hover{
+    background: rgb(255, 115, 0);
+    transition: 0.3s;
   }
   .services{
     display: flex;
