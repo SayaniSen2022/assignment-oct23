@@ -254,9 +254,13 @@ input[type="checkbox"]{
    justify-content: space-around;
 }
 .card-container .box{
-    border: 1px solid black;
+    margin: 5px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
     height: 200px;
     width: 200px;
+    box-shadow: 0 3px 10px rgb(0, 0, 0, 0.3);
 }
 #box1{
     background-image: url("./images/flower1.jpg");
@@ -350,30 +354,14 @@ input[type="checkbox"]{
     border: none;
     box-shadow: 0 3px 10px rgb(0, 0, 0, 0.3);
     border-radius: 15px;
-    /* height: 400px; */
     width: 300px;
-    /* background-repeat: no-repeat;
-    background-size: 330px 300px;
-    background-position: top; */
 }
-/* #flower1, #flower8{
-    background-image: url("./images/b6.jpg");
-}
-#flower2, #flower7 {
-    background-image: url("./images/b4.jpg");
-
-}
-#flower3, #flower6 {
-    background-image: url("./images/b7.jpg");
-}
-#flower4, #flower5 {
-    background-image: url("./images/b8.jpg");
-} */
-
 .box2 img{
+    position: relative;
+    top: -20px;
+    z-index: -1;
     height: 300px;
     width: 280px;
-    border-radius: 15px;
 }
 .box2 p{
 text-align: center;
@@ -383,6 +371,13 @@ font-size: 15px;
 font-weight: 400;
 color: #808080;
 }
+.rating-container{
+    margin-top: 15px;
+}
+.rating-container span:nth-child(6){
+    margin-left: 52%;
+    color: red;
+}
 .checked {
     color: orange;
 }
@@ -391,16 +386,44 @@ color: #808080;
     border: none;
     outline: none;
     background: #d3d3d3;
-    color: #808080;
+    color: #393c3d;
     font-size: 17px;
     text-transform: uppercase;
     text-align: center;
     border-radius: 5px;
     padding: 5px;
-    margin: 5px 5px 5px 0;
+    margin: 10px 5px 5px 0;
 }
 .box2 button:hover{
-    background: #7c838a;
-    color: #fff;
+    background: #b9c2cc;
     transition: 0.3s;
+}
+.delivery{
+    font-size: 13px;
+    text-transform: capitalize;
+    padding: 10px 0;
+}
+.delivery span:nth-child(1){
+    color: purple;
+    margin-right: 27%;
+}
+.delivery span:nth-child(2){
+    text-decoration: line-through;
+    color: #808080;
+}
+.discount{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 13px;
+    border: none;
+    border-radius: 25px;
+    padding: 3px;
+    width: 23%;
+    float: right;
+    position: relative;
+    top: 8px;
+    left: -5px;
+    background: green;
+    color: white;
+    font-weight: 600;
 }
