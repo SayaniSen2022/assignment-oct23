@@ -364,7 +364,7 @@ color: #808080;
     text-align: center;
     padding: 5px;
   }
-  .promo-container2 section:nth-child(2) div{
+  #hurry{
     font-family: 'Qwitcher Grypen', cursive;
     text-transform: capitalize;
     font-size: 7rem;
@@ -378,12 +378,17 @@ color: #808080;
   .promo-container2 section:nth-child(2) p{
     font-weight: 500;
   }
-  #timer{
-    display: inline-block;
-    height: 70px;
-    width: 60px;
-    border: 1px solid black;
-    margin-top: 10px;
+  .timer{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  }
+  .timer div{
+    flex-basis: 100px;
+  }
+  .timer p{
+    font-size: 50px;
+
   }
   .promo-container2 section:nth-child(2) button{
     padding: 10px 15px;
