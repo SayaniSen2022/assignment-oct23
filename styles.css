@@ -149,7 +149,7 @@ input[type="checkbox"]{
 .nav-links .drop-menu{
     background: rgb(233, 110, 10);;
     width: 150px;
-    top:40%;
+    top:23%;
     line-height: 45px;
     position: absolute;
     opacity: 0;
@@ -164,6 +164,34 @@ input[type="checkbox"]{
     list-style: none;
 }
 .drop-menu li a{
+    width: 100%;
+    display: block;
+    padding: 0 0 0 15px;
+    font-weight: 400;
+    border-radius: 0px;
+}
+.nav-links .drop-menu2 {
+    background: rgb(233, 110, 10);
+    ;
+    width: 150px;
+    top: 23%;
+    line-height: 45px;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.nav-links li:hover .drop-menu2 {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+}
+
+.drop-menu2 li {
+    list-style: none;
+}
+
+.drop-menu2 li a {
     width: 100%;
     display: block;
     padding: 0 0 0 15px;
@@ -740,6 +768,12 @@ color: #fff;
         transform: translateX(0);
         opacity: 1;
     }
+    .nav-links .drop-menu{
+        top: 30%;
+    }
+    .nav-links .drop-menu2{
+        top: 30%;
+    }
 .bestseller button{
     left: 10px;
 }
@@ -757,7 +791,19 @@ color: #fff;
     padding: 10px;
 }
 }   
-@media (min-width:800px){
+@media (max-width:800px){
+    .nav-links {
+            flex-direction: column;
+            padding: 10px;
+        }
+    
+        .nav-links .drop-menu {
+            top: 29%;
+        }
+    
+        .nav-links .drop-menu2 {
+            top: 32%;
+        }
 .quicklinks {
     flex-direction: row;
     justify-content: space-around;
