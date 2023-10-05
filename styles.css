@@ -769,10 +769,10 @@ color: #fff;
         opacity: 1;
     }
     .nav-links .drop-menu{
-        top: 30%;
+        top: 17%;
     }
     .nav-links .drop-menu2{
-        top: 30%;
+        top: 17%;
     }
 .bestseller button{
     left: 10px;
@@ -798,11 +798,11 @@ color: #fff;
         }
     
         .nav-links .drop-menu {
-            top: 29%;
+            top: 21%;
         }
     
         .nav-links .drop-menu2 {
-            top: 32%;
+            top: 23.5%;
         }
 .quicklinks {
     flex-direction: row;
@@ -812,4 +812,12 @@ color: #fff;
     flex-direction: row;
     justify-content: space-around;
 }
+}
+@media (max-width:400px){
+    .nav-links .drop-menu{
+        top:23%;
+    }
+    .nav-links .drop-menu2{
+        top:26%;
+    }
 }
